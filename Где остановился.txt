@@ -1,1 +1,1 @@
-http://code.mu/ru/javascript/prime/collections/objects/
+http://code.mu/ru/javascript/prime/multidimensionality/multi-arrays/
