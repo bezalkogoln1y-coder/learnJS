@@ -1,1 +1,1 @@
-http://code.mu/ru/javascript/prime/multidimensionality/multi-arrays/
+http://code.mu/ru/javascript/prime/multidimensionality/iteration-of-multi-arrays/
