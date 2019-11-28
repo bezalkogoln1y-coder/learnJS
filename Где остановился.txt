@@ -1,1 +1,1 @@
-http://code.mu/ru/javascript/prime/multidimensionality/iteration-of-multi-structures/
+http://code.mu/ru/javascript/prime/multidimensionality/adding-elements-into-multi-objects/
