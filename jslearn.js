@@ -1740,3 +1740,507 @@ for (let i = 0, k = 1; i < 3; i++) {
 	}
 }
 console.log(arr);*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/** Многомерные объекты **/
+
+/* 1 let obj = {
+    key1: {
+        key1: 1,
+        key2: 2,
+        key3: 3
+    },
+    key2: {
+        key1: 4,
+        key2: 5,
+        key3: 6
+    },
+    key3: {
+        key1: 7,
+        key2: 8,
+        key3: 9
+    }
+}
+
+// 1 способ console.log(obj.key1.key1 + obj.key1.key2 + obj.key1.key3 + obj.key2.key1 + obj.key2.key2 + obj.key2.key3 + obj.key3.key1 + obj.key3.key2 + obj.key3.key3);
+
+// 2 способ console.log(obj['key1']['key1'] + obj['key1']['key2'] + obj['key1']['key3'] + obj['key2']['key1'] + obj['key2']['key2'] + obj['key2']['key3'] + obj['key3']['key1'] + obj['key3']['key2'] + obj['key3']['key3']);*/
+
+/* 2 let obj = {
+    1: {
+        1: 'a1',
+        2: 'a2',
+        3: 'a3'
+    },
+    2: {
+        1: 'b1',
+        2: 'b2',
+        3: 'b3'
+    },
+    3: {
+        1: 'c1',
+        2: 'c2',
+        3: 'c3'
+    }
+}
+console.log(obj[2][1]);
+console.log(obj[3][1]);*/
+
+/* 3 let obj = {
+	key1: {
+		a: 1, 
+        b: 2, 
+        c: {
+			d: 3,
+			e: 4,
+		}, 
+        f: 5,
+	},
+	key2: {
+		g: 6, 
+        h: 7,
+	},
+}
+console.log(obj.key1.a + obj.key1.b + obj.key1.c.d + obj.key1.c.e + obj.key1.f + obj.key2.g + obj.key2.h);*/
+
+/* 4 let obj = {
+    1: {
+        1: 11,
+        2: 12,
+        3: 13
+    },
+    2: {
+        1: 21,
+        2: 22,
+        3: 23
+    },
+    3: {
+        1: 24,
+        2: 25,
+        3: 26
+    }
+},
+    result = 0;
+
+for (let key in obj) {
+    let subObj = obj[key];
+    for (let subKey in subObj) {
+        result += subObj[subKey];
+    }
+}
+
+console.log(result);*/
+
+/* 5 let months = {
+	'ru': [
+		'январь',
+		'февраль',
+		'март',
+		'апрель',
+		'май',
+		'июнь',
+		'июль',
+		'август',
+		'сентябрь',
+		'октябрь',
+		'ноябрь',
+		'декабрь',
+	],
+	'en': [
+		'january',
+		'february',
+		'march',
+		'april',
+		'may',
+		'june',
+		'july',
+		'august',
+		'september',
+		'october',
+		'november',
+		'december',
+	],
+};
+
+let lang = 'en';
+let month = 8;
+console.log(months[lang][month]);*/
+
+/* 6 let affairs = {
+	'2018': {
+		11: {
+			29: ['дело111', 'дело112', 'дело113'],
+			30: ['дело121', 'дело122', 'дело123'],
+		},
+		12: {
+			30: ['дело211', 'дело212', 'дело213'],
+			31: ['дело221', 'дело222', 'дело223'],
+		},
+	},
+	'2019': {
+		12: {
+			29: ['дело311', 'дело312', 'дело313'],
+			30: ['дело321', 'дело322', 'дело323'],
+			31: ['дело331', 'дело332', 'дело333'],
+		}
+	},
+}
+let year = prompt('Введите год за который нужно дело','2018,2019 - одно число');
+let month = prompt('Введите месяц за который нужно дело','11,12 - одно число');
+let day = prompt('Введите день за который нужно дело','29,30,31 - одно число');
+
+if (affairs[year][month][day] === undefined) {
+    document.write('Дел за такую дату не найдено')
+} else {
+    for (let i = 0; i < affairs[year][month][day].length; i++) {
+        document.write(affairs[year][month][day][i] + '<br>');
+    }
+}*/
+
+/* 7 //Автор следующего кода хотел вывести элемент со значением '24':
+let obj = {
+	key1: {
+		key2: '12',
+		key3: '13',
+	},
+	key2: {
+		key4: '24',
+		key5: '25',
+	},
+}
+
+let key1 = 'key2';
+let key2 = 'key4';
+//console.log(obj['key1'][key2]);
+console.log(obj[key1][key2]);*/
+
+/* 8 //Автор следующего кода хотел вывести элемент со значением '24':
+let obj = {
+	key1: {
+		key2: '12',
+		key3: '13',
+	},
+	key2: {
+		key4: '24',
+		key5: '25',
+	},
+}
+
+let key1 = 'key2';
+let key2 = 'key4';
+//console.log(obj.key1.key2); в таком случае выдаст 12, т.к. мы напрямую обратились через свойства и obj['key1']['key2'] == '12'
+console.log(obj[key1][key2]);*/
+
+/* 9 //Автор следующего кода хотел вывести элемент со значением '24':
+let obj = {
+	key1: {
+		key2: '12',
+		key3: '13',
+	},
+	key2: {
+		key4: '24',
+		key5: '25',
+	},
+}
+
+let key1 = 'key2';
+let key2 = 'key4';
+//console.log(obj.key1['key2']); Тоже самое, обращаемся напрямую к ключам, а не через переменную и получаем неверное значение
+console.log(obj[key1][key2]);*/
+
+/* 10 //Автор следующего кода хотел вывести элемент со значением '24':
+let obj = {
+	key1: {
+		key2: '12',
+		key3: '13',
+	},
+	key2: {
+		key4: '24',
+		key5: '25',
+	},
+}
+
+let key1 = 'key2';
+let key2 = 'key4'; // новая переменная
+//console.log(obj['key1']['key4']); Тут обращаемся смешанно, к переменной и непосредственно по ключу, т.к. дана всего одна переменная
+console.log(obj[key1]['key4']); 
+console.log(obj[key1][key2]); //Так же мы можем объявить переменную и обращаться с помощью двух*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/** Комбинация массив + объект и наоборот **/
+
+/* 1 let employees = [
+     {   
+         name: 'name1',   
+         salary: 300
+     },  
+     {   
+         name: 'name2',   
+         salary: 400
+     },  
+     {   
+         name: 'name3',   
+         salary: 500
+     }
+];
+let summ = employees[0].salary + employees[1].salary;
+document.write('Сумма зарплат первого и второго работника = '+summ);*/
+
+/* 2 let students = {  
+         'boys':  ['Коля', 'Вася', 'Петя'],  
+         'girls': ['Даша', 'Маша', 'Лена'],
+};
+document.write('Первый студент: '+students.boys[1]+'<br>');
+document.write('Второй студент: '+students.girls[2]);*/
+
+/* Пример let users = [
+	{
+		name: 'name1',
+		age: 31,
+	},
+	{
+		name: 'name2',
+		age: 32,
+	},
+	{
+		name: 'name3',
+		age: 33,
+	},
+];
+
+for (let user of users) {
+    document.write(user.name+' '+user.age+'<br>');
+}*/
+
+/* 3 let workers = [
+    {
+        name: 'Vlad',
+        salary: 300
+    },
+    {
+        name: 'Gena',
+        salary: 400
+    },
+    {
+        name: 'Semen',
+        salary: 500
+    }
+];
+
+for (let worker of workers) {
+    document.write(worker.name+' - '+worker.salary+'<br>');
+} // 1 способ - рекомендую этот, т.к. он проще в понимании и меньше символов))
+
+for (let i = 0; i < workers.length; i++) {
+    document.write(workers[i].name+' - '+workers[i].salary+'<br>');
+} // 2 способ*/
+
+/* 4 let workers = [
+    {
+        name: 'Vlad',
+        salary: 300
+    },
+    {
+        name: 'Gena',
+        salary: 400
+    },
+    {
+        name: 'Semen',
+        salary: 500
+    }
+],
+    summ = 0;
+for (let worker of workers) {
+    summ += worker.salary;
+}
+document.write('Общая зарплата сотрудников = '+summ);*/
+
+/* 5 let workers = [
+    {
+        name: 'Vlad',
+        salary: 300,
+        age: 28
+    },
+    {
+        name: 'Gena',
+        salary: 400,
+        age: 29
+    },
+    {
+        name: 'Semen',
+        salary: 500,
+        age: 30
+    },
+    {
+        name: 'Artem',
+        salary: 600,
+        age: 31
+    },
+    {
+        name: 'Vadim',
+        salary: 700,
+        age: 32
+    }
+],
+    summ = 0;
+
+for (let worker of workers) {
+    if (worker.age >= 30) {
+        summ += worker.salary;
+    }
+}
+
+document.write('Общая зарплата сотрудников которым 30 и более лет = '+summ);*/
+
+/* 6 let workers = [
+    {
+        name: 'Vlad',
+        salary: 300,
+        age: 28,
+        dismissed: false
+    },
+    {
+        name: 'Gena',
+        salary: 400,
+        age: 29,
+        dismissed: true
+    },
+    {
+        name: 'Semen',
+        salary: 500,
+        age: 30,
+        dismissed: false
+    },
+    {
+        name: 'Artem',
+        salary: 600,
+        age: 31,
+        dismissed: true
+    },
+    {
+        name: 'Vadim',
+        salary: 700,
+        age: 32,
+        dismissed: false
+    }
+];
+document.write('<strong>Неуволенные сотрудники (их имена и зарплаты):</strong><br><br>')
+for (let worker of workers) {
+    if (worker.dismissed === false) {
+        document.write(worker.name+' - '+worker.salary+'<br>');
+    }
+}
+document.write('<br><br><strong>Уволенные сотрудники:</strong><br><br>')
+for (let worker of workers) {
+    if (worker.dismissed === true) {
+        document.write(worker.name+'<br>');
+    }
+}*/
+
+/* 7 let data = {
+    1: ['data11', 'data12', 'data13'],
+    2: ['data21', 'data22', 'data23'],
+    3: ['data31', 'data32', 'data33', 'data34', 'data35'],
+    4: ['data41', 'data42']
+};
+
+for (let key in data) {
+    for (let element of data[key]) {
+        document.write(element+'<br>');
+    }
+}*/
+
+/* 8 let data = [
+    {
+        1: 'data11',
+        2: 'data12',
+        3: 'data13',
+        4: 'data14'
+    },
+    {
+        1: 'data21',
+        2: 'data22',
+        3: 'data23'
+    },
+    {
+        1: 'data31',
+        2: 'data32',
+        3: 'data33'
+    }
+];
+
+
+for (obj of data) {
+    for (key in obj) {
+        document.write(obj[key]+'<br>');
+    }
+}*/
+
+/* 9 let data = [
+	{
+		1: [
+			'data111',
+			'data112',
+			'data113',
+		],
+		2: [
+			'data121',
+			'data122',
+			'data123',
+		],
+	},
+	{
+		1: [
+			'data211',
+			'data212',
+			'data213',
+		],
+		2: [
+			'data221',
+			'data222',
+			'data223',
+			'data224',
+		],
+		3: [
+			'data231',
+			'data232',
+			'data233',
+			'data234',
+			'data235',
+		],
+	},
+	{
+		1: [
+			'data411',
+			'data412',
+			'data413',
+		],
+		2: [
+			'data421',
+		],
+	},
+];
+
+for (subObj of data) {
+    for (key in subObj) {
+        for (element of subObj[key]) {
+            document.write(element+'<br>');
+        }
+    }
+}*/
