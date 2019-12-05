@@ -3172,102 +3172,73 @@ for (obj of data) {
 console.log(convertedData);*/
     
 
-Задача 
 
-Дан список событий за определенные даты, хранящийся в следующей структуре:
-
+/* 8
 let events = [
 	{
-		date:  '2019-12-29'
+		date:  '2019-12-29',
 		event: 'name1'
 	},
 	{
-		date:  '2019-12-31'
+		date:  '2019-12-31',
 		event: 'name2'
 	},
 	{
-		date:  '2019-12-29'
+		date:  '2019-12-29',
 		event: 'name3'
 	},
 	{
-		date:  '2019-12-30'
+		date:  '2019-12-30',
 		event: 'name4'
 	},
 	{
-		date:  '2019-12-29'
+		date:  '2019-12-29',
 		event: 'name5'
 	},
 	{
-		date:  '2019-12-31'
+		date:  '2019-12-31',
 		event: 'name6'
 	},
 	{
-		date:  '2019-12-29'
+		date:  '2019-12-29',
 		event: 'name7'
 	},
 	{
-		date:  '2019-12-30'
+		date:  '2019-12-30',
 		event: 'name8'
 	},
 	{
-		date:  '2019-12-30'
+		date:  '2019-12-30',
 		event: 'name9'
 	},
-]
-Напишите код, которой переделает структуру данных вот в такую:
+],
+    newObj = {};
 
-{
-	'2019-12-29': ['name1', 'name3', 'name5', 'name7'],
-	'2019-12-30': ['name4', 'name8', 'name9'],
-	'2019-12-31': ['name2', 'name6'],
-}
+for (obj of events) {
+    if (newObj[obj.date] === undefined) {
+        newObj[obj.date] = [];
+    }
     
-/*Задача 
+    newObj[obj.date].push(obj.event);
+}
 
-Дан список событий за определенные даты, хранящийся в следующей структуре:
+console.log(newObj);*/
 
+
+
+/* 9
 let events = {
 	'2019-12-29': ['name1', 'name3', 'name5', 'name7'],
 	'2019-12-30': ['name4', 'name8', 'name9'],
 	'2019-12-31': ['name2', 'name6'],
+},
+    newArr = [];
+for (data in events) {
+    for (element of events[data]) {
+        newArr.push({
+            date: data,
+            event: element
+        })
+    }
 }
-Напишите код, которой переделает структуру данных вот в такую:
-
-let events = [
-	{
-		date:  '2019-12-29'
-		event: 'name1'
-	},
-	{
-		date:  '2019-12-31'
-		event: 'name2'
-	},
-	{
-		date:  '2019-12-29'
-		event: 'name3'
-	},
-	{
-		date:  '2019-12-30'
-		event: 'name4'
-	},
-	{
-		date:  '2019-12-29'
-		event: 'name5'
-	},
-	{
-		date:  '2019-12-31'
-		event: 'name6'
-	},
-	{
-		date:  '2019-12-29'
-		event: 'name7'
-	},
-	{
-		date:  '2019-12-30'
-		event: 'name8'
-	},
-	{
-		date:  '2019-12-30'
-		event: 'name9'
-	},
-]*/
+console.log(newArr);*/
