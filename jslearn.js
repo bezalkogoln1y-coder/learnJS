@@ -3170,7 +3170,7 @@ for (obj of data) {
 }
 
 console.log(convertedData);*/
-    
+
 
 
 /* 8
@@ -3254,7 +3254,7 @@ console.log(newArr);*/
 
 /** Математические методы **/
 
-//Math.pow(), Math.sqrt();
+//Math.pow(), Math.sqrt()
 //Примеры 
 /*console.log(Math.pow(3,3)); //Возведение 3 в 3ю степень. 3³ = 27
 console.log(Math.pow(2, -2)); //Возведение в -2 степень числа 2. Минусовая степень - это переворот числа и возведение в степнь (1/2)²=0.25
@@ -3281,6 +3281,72 @@ for (num of arr) {
 }
 
 console.log(Math.sqrt(result));*/
+
+
+//Math.round(), Math.ceil(), Math.floor(), toFixed(), toPrecision()
+//Примеры
+/*console.log(Math.round(4.5)); // Вернёт 5
+console.log(Math.round(4.3)); // Вернёт 4
+console.log(Math.round(4.7)); // Вернёт 5
+
+console.log(Math.ceil(4.1)); // Вернёт 5
+console.log(Math.ceil(4.8)); // Вернёт 5
+
+console.log(Math.floor(4.1)); // Вернёт 4
+console.log(Math.floor(4.8)); // Вернёт 4
+
+let num = 3.1312312,
+    num1 = 378.31233215;
+
+console.log(num.toFixed(2)); //Вернёт 3.13
+console.log(num.toFixed(9)); // Вернёт 3.131231200
+
+console.log(num1.toPrecision(2)); // Вернёт 3.8e+2;
+console.log(num1.toPrecision(15)); // Вернёт 378.312332150000*/
+
+//Задачи
+//1
+/*let num = 379;
+console.log('До целого = '+Math.round(Math.sqrt(num)));
+console.log('До десятых = '+Math.sqrt(num).toFixed(1));
+console.log('До сотых = '+Math.sqrt(num).toFixed(2));*/
+
+//2
+/*let num = 587,
+    sqrtNum = Math.sqrt(num);
+    floorNum = Math.floor(sqrtNum),
+    ceilNum = Math.ceil(sqrtNum),
+    obj = {};
+
+obj.ceil = ceilNum;
+obj.floor = floorNum;
+
+console.log(obj);*/
+
+
+//Math.max(), Math.min()
+//Примеры
+/*let arr1 = [1,3,6,1,24]
+console.log(Math.max(1,6,12,5,2,34)); //Вернёт 34
+console.log(Math.max()); // Вернёт -Infinity
+console.log(Math.max.apply(null, arr1)); //Вернёт 24
+
+console.log(Math.min(1,6,12,5,2,34)); //Вернёт 1
+console.log(Math.min()); // Вернёт Infinity
+console.log(Math.min.apply(null, arr1)); //Вернёт 1*/
+
+//Задачи
+//1
+/*let arr = [4,-2,5,19,-130,0,10],
+    min = Math.min(4,-2,5,19,-130,0,10),
+    max = Math.max(4,-2,5,19,-130,0,10),
+    minInArr = Math.min.apply(null, arr),
+    maxInArr = Math.max.apply(null, arr);
+
+console.log('Минимальное число = '+min);
+console.log('Максимальное число = '+max);
+console.log('Минимальное число в массиве = '+minInArr);
+console.log('Максимальное число в массиве = '+maxInArr);*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
