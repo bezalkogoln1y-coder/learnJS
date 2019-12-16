@@ -3348,6 +3348,57 @@ console.log('Максимальное число = '+max);
 console.log('Минимальное число в массиве = '+minInArr);
 console.log('Максимальное число в массиве = '+maxInArr);*/
 
+
+//Math.random()
+//Примеры
+/*console.log(Math.random()); //выведет рандомное дробное число от 0 до 1
+function getRandomArbitary(min,max) {
+    return Math.random()*(max-min)+min;
+}// функция вывода рандомного числа в промежутке
+function getRandomInt(max,min) {
+    return Math.floor(Math.random()*(max-min+1))+min;
+}// функция выводи целого рандомного числа в промежутке
+console.log(getRandomArbitary(1,8)); //выведет рандомное дробное число от 1 до 8
+console.log(getRandomInt(1,9)); //выведет рандомное целое число от 1 до 9*/
+
+//Задачи
+//1
+/*
+function getRandomInt(min,max) {
+    return Math.floor(Math.random()*(max-min+1))+min;
+}
+console.log(getRandomInt(1,100));
+*/
+
+//2
+/*
+function getRandomInt(min,max) {
+    return Math.floor(Math.random()*(max-min+1))+min
+}
+let arr = [],
+    i = 0;
+while (i < 10) {
+    i++;
+    arr.push(getRandomInt(2,9));
+}
+console.log(arr);
+*/
+
+
+//Math.abs()
+//Примеры
+/*
+console.log(Math.abs(-3)); //вернёт 3
+console.log(Math.abs(5)); //вернёт 5
+*/
+
+//Задачи
+//1
+/*let a = Number(prompt('Введите a','0')),
+    b = Number(prompt('Введите b','0')),
+    modul = Math.abs(a-b);
+document.write('Модуль разности ваших чисел = '+modul);*/
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3356,6 +3407,47 @@ console.log('Максимальное число в массиве = '+maxInArr)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*Строковые методы*/
+/*Некоторые примеры есть уже в теории, поэтому тут их не рассматриваем.*/
+
+//строка.substr(), строка.substring(), строка.slice()
+//Примеры
+/*let str = 'Hello World!';
+console.log(str.substr(0,4)); //вернёт 'Hell'
+console.log(str.substr(6)); //вернёт 'World!'
+
+console.log(str.substring(0,1)); //вернёт 'H'
+console.log(str.substring(3,2)); //вернёт 'l'
+console.log(str.substring(-3,5)); //вернёт 'Hello '
+console.log(str.substring(4)); //вернёт 'o World!'
+
+console.log(str.slice(3,-2)); //вернёт 'lo Worl'*/
+
+//Задачи
+//1
+/*
+let str = 'js';
+console.log(str.toUpperCase());*/
+
+//2
+/*
+let str = 'JS';
+console.log(str.toLowerCase());*/
+
+//3
+/*let str = 'я учу javascript!';
+document.write('<strong>Через substr:</strong><br><br>');
+document.write(str.substr(2,3)+'<br>');
+document.write(str.substr(6,10)+'<br><br>');
+
+document.write('<strong>Через substring:</strong><br><br>');
+document.write(str.substring(2,5)+'<br>');
+document.write(str.substring(6,str.length)+'<br><br>');
+
+document.write('<strong>Через substr:</strong><br><br>');
+document.write(str.substr(2,3)+'<br>');
+document.write(str.substr(6,10)+'<br><br>');*/
 
 /** Функции. Начало **/
 /*function summArrNumberSquare(arr) {
