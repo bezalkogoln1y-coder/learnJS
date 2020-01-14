@@ -3443,11 +3443,162 @@ document.write(str.substr(6,10)+'<br><br>');
 
 document.write('<strong>Через substring:</strong><br><br>');
 document.write(str.substring(2,5)+'<br>');
-document.write(str.substring(6,str.length)+'<br><br>');
+document.write(str.substring(6,str.length-1)+'<br><br>');
 
-document.write('<strong>Через substr:</strong><br><br>');
-document.write(str.substr(2,3)+'<br>');
-document.write(str.substr(6,10)+'<br><br>');*/
+document.write('<strong>Через slice:</strong><br><br>');
+document.write(str.slice(2,5)+'<br>');
+document.write(str.slice(6,str.length-1)+'<br><br>');*/
+
+//4 Задача непонятна
+
+//5
+/*let str = 'abdec';
+document.write('Исходная строка: '+ str + '<br>');
+document.write('Позиция буквы c: '+ str.indexOf('c'));*/
+
+//6
+/*let str = 'bceqya';
+document.write('Исходная строка: '+ str + '<br>');
+if (str.indexOf('a') !== -1) {
+    document.write('В данной строке есть буква а');
+}
+
+else {
+    document.write('В данной строке нет буквы а');
+}*/
+
+//7
+/*let str = 'dvdteada';
+document.write('Исходная строка: '+ str + '<br>');
+if (str.indexOf('a') === 0) {
+    document.write('Данная строка начинается с символа а');
+}
+
+else {
+    document.write('Данная строка не начинается с символа а');
+}*/
+
+//8
+/*let str = 'dvdteada';
+document.write('Исходная строка: '+ str + '<br>');
+if (str.lastIndexOf('a') === str.length-1) {
+    document.write('Данная строка заканчивается символом а');
+}
+
+else {
+    document.write('Данная строка не заканчивается символом а');
+}*/
+
+//9,10
+/*let str = 'https://iskmarket.ru/index.htm';
+document.write('Исходная строка: '+ str + '<br>');
+if (str.indexOf('http://') === 0) {
+    document.write('Данная строка начинается с http://<br>');
+}
+
+else {
+    document.write('Данная строка не начинается с http://<br>');
+}
+
+if (str.lastIndexOf('.html') === str.length-5) {
+    document.write('Данная строка кончается на .html');
+}
+
+else {
+    document.write('Данная строка не кончается на .html');
+}*/
+
+//11,12
+/*let str = 'http://iskmarket.ru/index.html';
+document.write('Исходная строка: '+ str + '<br>');
+if (str.startsWith('http://')) {
+    document.write('Данная строка начинается с http://<br>');
+}
+
+else {
+    document.write('Данная строка не начинается с http://<br>');
+}
+
+if (str.endsWith('.html')) {
+    document.write('Данная строка кончается на .html');
+}
+
+else {
+    document.write('Данная строка не кончается на .html');
+}*/
+
+//13
+/*let str = '1-2-3-4-5',
+    arr = str.split('-');
+console.log(arr);*/
+
+//14
+/*let str = '12345',
+    arr = str.split('');
+console.log(arr);*/
+
+//15
+/*let arr = [1,2,3,4,5],
+    str = arr.join('-');
+console.log(str);*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/** Практика на стандартные методы **/
+
+//1,2
+/*let str = 'london',
+    result1 = str.slice(0,1).toUpperCase() + str.slice(1),
+    result2 = str.slice(0, str.length-1) + str.slice(str.length-1,str.length).toUpperCase(),
+    result3 = str.slice(0,2).toUpperCase() + str.slice(2);
+console.log(result1);
+console.log(result2);
+console.log(result3);*/
+//3
+/*let str = 'London',
+    result = str.slice(0,1).toLowerCase() + str.slice(1);
+console.log(result);*/
+//4
+/*let str = 'word1 word2 word3',
+    arr = str.split(' ');
+for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].slice(0,1).toUpperCase() + arr[i].slice(1);
+}
+console.log(arr);*/
+//5
+/*let str = 'let_me_love',
+    arr = str.split('_'),
+    result = '';
+for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].slice(0,1).toUpperCase() + arr[i].slice(1);
+}
+result = arr.join('');
+console.log(result);*/
+//6
+/*let str = 'let_me_love',
+    arr = str.split('_'),
+    result = arr.join('');
+console.log(result);*/
+//7
+/*let str = 'abcdefghikl';
+console.log(str.split('').reverse().join(''));
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /** Функции. Начало **/
 /*function summArrNumberSquare(arr) {
