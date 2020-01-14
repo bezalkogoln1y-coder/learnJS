@@ -3601,14 +3601,199 @@ console.log(str.split('').reverse().join(''));
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /** Функции. Начало **/
-/*function summArrNumberSquare(arr) {
+function isInteger(num) {
+  return (num ^ 0) === num;
+}
+//1
+/*
+function summArrNumberSquare(arr) {
     let summ = 0;
-    for (elem of arr) {
-        summ += elem;
+    for (num of arr) {
+        summ += Math.pow(num,2);
     }
     return summ;
 }
-
 let arr = [1,6,2,3,8,9];
 console.log(summArrNumberSquare([1,3,7,2]));
-console.log(summArrNumberSquare(arr));*/
+console.log(summArrNumberSquare(arr));
+*/
+
+//2
+/*
+function getDigitsSum(num) {
+    let arr = [],
+        result = 0;
+    if (!isInteger(num)) {
+        alert('Нужно целое число');
+    }
+    
+    arr = String(num).split('');
+    for (digit of arr) {
+        result += Number(digit);
+    }
+    
+    return result;
+}
+console.log(getDigitsSum(4.3));
+*/
+
+//3
+/*
+function getDivisors(num) {
+    let arr = [];
+    for (let i = 0; i <= num; i++) {
+        if (isInteger(num / i)) {
+            arr.push(i);
+        }
+    }
+    return arr;
+}
+console.log(getDivisors(13));
+*/
+
+//4
+/*
+function reverseStr(str) {
+    return str.split('').reverse().join('');
+}
+console.log(reverseStr('abcdefg'));
+*/
+
+//5
+/*
+function delElem(str,arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == str) {
+            arr.splice(i,i+1);
+        }
+    }
+    return arr;
+}
+
+let arr = ['abc',32,11,1,2,3,8];
+console.log(delElem(32, arr));
+*/
+
+//6
+/*
+function arrFill(num) {
+    let arr = [];
+    for (let i = 1; i <= num; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+console.log(arrFill(8));
+*/
+
+//7
+/*
+function arrFill(num1, num2) {
+    let arr = [];
+    for (let i = num1; i <= num2; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+console.log(arrFill(3,7));
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/** Правильное использование функций JavaScript **/
+
+//1
+/*
+function isPrime(num) {
+	for (let i = 2; i < num; i++) {
+		if (num % i == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+let arr = [];
+for (let i = 1; i <= 100; i++) {
+    if (isPrime(i)) {
+        arr.push(i);
+    }
+}
+console.log(arr);
+*/
+
+//2
+/*
+function getDigitsSum(num) {
+	let sum = 0;
+	let digits = String(num).split('');
+	
+	for (let digit of digits) {
+		sum += Number(digit);
+	}
+	return sum;
+}
+
+let arr = [];
+for (let i = 1; i <= 2030; i++) {
+    if (getDigitsSum(i) === 13) {
+        arr.push(i);
+    }
+}
+console.log(arr);
+*/
+
+//3
+/*
+let nums = [123, 456, 789];
+let result = [];
+function reverseNum(num) {
+    return String(num).split('').reverse().join('');
+}
+for (let num of nums) {
+	result.push(reverseNum(num));
+}
+console.log(result);
+*/
+
+//4
+/*
+let num1 = 234;
+let num2 = 531;
+function digitsSum(num) {
+    let arr = String(num).split(''),
+        result = 0;
+    for (element of arr) {
+        result += Number(element);
+    }
+    return result;
+}
+if (digitsSum(num1) == digitsSum(num2)) {
+	alert('суммы цифр совпадают');
+} else {
+	alert('суммы цифр не совпадают');
+}
+*/
+
+//5
+/*
+let nums = [12, 24, 35, 14, 13];
+function getDivisors(num) {
+	let result = [];
+	for (let i = 2; i < num; i++) {
+		if (num % i == 0) {
+			result.push(num / i);
+		}
+	}
+	return result;
+}
+for (let num of nums) {
+	console.log(num + ': ' + getDivisors(num).join(', '));
+}
+*/
